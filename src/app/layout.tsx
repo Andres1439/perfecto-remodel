@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "4uremodel",
+  title: "PerfectoRemodel",
   description: "PerfectoRemodel",
 };
 
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} flex flex-col @container antialiased min-h-screen`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} flex flex-col @container antialiased min-h-screen bg-gray-200`}>
         <header>
           <Navbar />
         </header>

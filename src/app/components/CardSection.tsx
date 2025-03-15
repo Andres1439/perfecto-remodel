@@ -12,10 +12,10 @@ const CardSection = () => {
   ];
 
   return (
-    <section className="py-8 bg-gray-50">
-      <h2 className="text-center pb-8 text-2xl font-bold">Our Top Projects</h2>
+    <section className="py-8 bg-gray-700 @container p-5 mt-5 w-full">
+      <h2 className="text-center py-12 text-2xl sm:text-4xl font-bold text-white">Our Top Projects</h2>
       <div className="mx-auto px-2 max-w-7xl">
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-10">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-10">
           {cards.map((card) => (
             <div
               key={card.id}

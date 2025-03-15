@@ -30,29 +30,32 @@ export const ImageList = () => {
   ];
 
   return (
-    <div className="container mx-auto py-8 p-4">
-      <h2 className="text-center font-bold text-2xl py-8">Our Projects</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
-        {items.map((item, index) => (
-          <div key={index} className="flex items-center bg-white rounded hover:shadow-lg transition-shadow duration-200 h-24">
-            {/* Contenedor de la imagen - Versión corregida */}
-            <div className="relative w-24 h-24 flex-shrink-0">
-              <Image
-                src={item.imageSrc} // Corregido de card.imgSrc a item.imageSrc
-                alt={item.title} // Corregido de card.title a item.title
-                fill
-                className="object-contain py-4 scale-50"
-                priority={index < 4} // Prioriza carga de primeras imágenes
-              />
-            </div>
+    <section className="hidden md:block @container mx-auto py-8 px-4 max-w-7xl">
+      <header className="text-center">
+        <h2 className="font-bold text-2xl pb-8">Our Projects</h2>
+      </header>
 
-            {/* Contenedor del texto */}
-            <div className="flex-1 py-4">
-              <h3 className="text-lg font-semibold text-gray-800 truncate">{item.title}</h3>
-            </div>
-          </div>
+      <ul className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        {items.map((item, index) => (
+          <li
+            key={index}
+            className="flex flex-col items-center justify-between bg-white rounded-lg hover:shadow-lg transition-shadow duration-300 p-4 h-40 @sm:h-36 w-full max-w-[200px] mx-auto"
+          >
+            <figure className="relative w-16 h-16 @sm:w-14 @sm:h-14">
+              <Image
+                src={item.imageSrc}
+                alt={item.title}
+                fill
+                className="object-contain p-1"
+                sizes="(max-width: 768px) 50vw, 20vw"
+                priority={index < 8}
+              />
+            </figure>
+
+            <h3 className="text-base @sm:text-sm font-semibold text-gray-800 leading-tight text-center px-2 mt-2">{item.title}</h3>
+          </li>
         ))}
-      </div>
-    </div>
+      </ul>
+    </section>
   );
 };
