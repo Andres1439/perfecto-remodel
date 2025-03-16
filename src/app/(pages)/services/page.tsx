@@ -1,3 +1,4 @@
+"use client";
 import { ImageList } from "@/app/components/ImageList";
 import React from "react";
 

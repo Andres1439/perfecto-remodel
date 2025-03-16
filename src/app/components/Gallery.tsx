@@ -57,7 +57,7 @@ export const Gallery = () => {
             className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
           />
           <Image
-            src="/img/trabajo6_small.jpg"
+            src="/img/trabajo7.jpg"
             width={5000}
             height={5000}
             alt=""

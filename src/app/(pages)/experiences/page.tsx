@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import Image from "next/image";
 
 export default function page() {
   return (
@@ -10,8 +12,11 @@ export default function page() {
             href="#"
             className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50"
           >
-            <img
-              src="https://source.unsplash.com/random/480x360"
+            <Image
+              width={5000}
+              height={5000}
+              alt=""
+              src="/img/trabajo7.jpg"
               alt=""
               className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500"
             />
@@ -23,10 +28,13 @@ export default function page() {
           </a>
           <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <a rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50">
-              <img
+              <Image
+                width={5000}
+                height={5000}
+                alt=""
                 role="presentation"
                 className="object-cover w-full rounded h-44 dark:bg-gray-500"
-                src="https://source.unsplash.com/random/480x360?1"
+                src="/img/trabajo7.jpg"
               />
               <div className="p-6 space-y-2">
                 <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
@@ -38,10 +46,13 @@ export default function page() {
               </div>
             </a>
             <a rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50">
-              <img
+              <Image
+                width={5000}
+                height={5000}
+                alt=""
                 role="presentation"
                 className="object-cover w-full rounded h-44 dark:bg-gray-500"
-                src="https://source.unsplash.com/random/480x360?2"
+                src="/img/trabajo7.jpg"
               />
               <div className="p-6 space-y-2">
                 <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
@@ -53,10 +64,13 @@ export default function page() {
               </div>
             </a>
             <a rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50">
-              <img
+              <Image
+                width={5000}
+                height={5000}
+                alt=""
                 role="presentation"
                 className="object-cover w-full rounded h-44 dark:bg-gray-500"
-                src="https://source.unsplash.com/random/480x360?3"
+                src="/img/trabajo7.jpg"
               />
               <div className="p-6 space-y-2">
                 <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
@@ -72,10 +86,13 @@ export default function page() {
               href="#"
               className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block"
             >
-              <img
+              <Image
+                width={5000}
+                height={5000}
+                alt=""
                 role="presentation"
                 className="object-cover w-full rounded h-44 dark:bg-gray-500"
-                src="https://source.unsplash.com/random/480x360?4"
+                src="/img/trabajo7.jpg"
               />
               <div className="p-6 space-y-2">
                 <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
@@ -91,10 +108,13 @@ export default function page() {
               href="#"
               className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block"
             >
-              <img
+              <Image
+                width={5000}
+                height={5000}
+                alt=""
                 role="presentation"
                 className="object-cover w-full rounded h-44 dark:bg-gray-500"
-                src="https://source.unsplash.com/random/480x360?5"
+                src="/img/trabajo7.jpg"
               />
               <div className="p-6 space-y-2">
                 <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
@@ -110,10 +130,13 @@ export default function page() {
               href="#"
               className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block"
             >
-              <img
+              <Image
+                width={5000}
+                height={5000}
+                alt=""
                 role="presentation"
                 className="object-cover w-full rounded h-44 dark:bg-gray-500"
-                src="https://source.unsplash.com/random/480x360?6"
+                src="/img/trabajo7.jpg"
               />
               <div className="p-6 space-y-2">
                 <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
