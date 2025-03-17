@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Perfecto Remodel - Home Improvement Website
 
-## Getting Started
+Perfecto Remodel es un sitio web para una empresa de remodelación de viviendas, que ofrece servicios de renovación y mejora del hogar. Este sitio está construido con Next.js y tiene una interfaz limpia y profesional que resalta los servicios y la experiencia de la empresa.
 
-First, run the development server:
+## Descripción
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Este proyecto presenta una plataforma de presentación para **Perfecto Remodel**, una empresa especializada en remodelaciones, que destaca sus servicios, como reformas de cocinas, baños, ampliaciones y más. El sitio utiliza imágenes de alta calidad y contiene secciones interactivas que permiten a los usuarios conocer más sobre la empresa y ponerse en contacto para obtener más información.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologías utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js** - Framework para React, que facilita la creación de aplicaciones web rápidas y con optimización automática.
+- **React** - Librería JavaScript para construir interfaces de usuario.
+- **Tailwind CSS** - Framework de utilidades para crear interfaces modernas y responsivas.
+- **Image Optimization** - Next.js ofrece optimización automática de imágenes, lo que mejora el rendimiento.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Estructura del Proyecto
 
-## Learn More
+El proyecto está compuesto por los siguientes componentes principales:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Hero**: Un componente que muestra la imagen principal y el mensaje de bienvenida en la página principal.
+- **CardSection**: Sección que presenta información breve sobre los servicios que ofrece la empresa.
+- **Gallery**: Componente que muestra una galería de imágenes de proyectos anteriores de remodelación.
+- **Página principal (`Home`)**: La página de inicio de la aplicación, que integra todos los componentes anteriores.

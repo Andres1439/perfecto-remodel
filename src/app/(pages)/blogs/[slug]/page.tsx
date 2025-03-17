@@ -186,14 +186,24 @@ const blogPosts: Record<string, BlogPost> = {
     image: "/img/wallpaper.jpg",
   },
 };
-
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const post = blogPosts[params.slug];
+  if (!post) {
+    return {
+      title: "Page Not Found",
+      description: "The page you're looking for doesn't exist.",
+      openGraph: {
+        img: "/img/not-found.jpg",
+        type: "article",
+        publishedTime: new Date().toISOString(),
+      },
+    };
+  }
   return {
-    title: `${post?.title} | Perfecto Remodel`,
-    description: post?.content,
+    title: `${post.title} | Perfecto Remodel`,
+    description: post.content,
     openGraph: {
-      img: post?.image,
+      img: post.image,
       type: "article",
       publishedTime: new Date().toISOString(),
     },
@@ -212,30 +222,13 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <article className="flex flex-col md:flex-row gap-8">
         <section className="w-full md:w-1/2">
           <figure className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
-            <Image src={post.image} alt={post.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" priority />
+            <Image src={post.image} alt={post.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
           </figure>
         </section>
 
-        <section className="w-full md:w-1/2 space-y-6">
-          <header>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{post.title}</h1>
-          </header>
-
-          <section className="prose prose-lg max-w-none text-gray-600">
-            <p className="lead">{post.content}</p>
-
-            <section aria-labelledby="detalles-servicio">
-              <h2 id="detalles-servicio" className="text-2xl font-semibold text-gray-900 mt-6 mb-4">
-                Service Details
-              </h2>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>High-quality materials</li>
-                <li>Certified personnel</li>
-                <li>Written warranty</li>
-                <li>Compliance with safety regulations</li>
-              </ul>
-            </section>
-          </section>
+        <section className="w-full md:w-1/2">
+          <h1 className="text-3xl font-bold text-gray-900">{post.title}</h1>
+          <p className="mt-4 text-gray-700">{post.content}</p>
         </section>
       </article>
     </main>
