@@ -1,12 +1,14 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 
+// Definimos el tipo para un post del blog
 type BlogPost = {
   title: string;
   content: string;
   image: string;
 };
 
+// Objeto que contiene todos los posts del blog
 const blogPosts: Record<string, BlogPost> = {
   asphalt: {
     title: "Asphalt Paving",
@@ -26,27 +28,12 @@ const blogPosts: Record<string, BlogPost> = {
       "We have over 15 years of experience in basement waterproofing systems and construction services in the Long Island, NY area. We are known for our excellent customer service and long-lasting relationships. Our goal is to provide cost-effective solutions while educating homeowners on basement issues and how to maximize their space. A dry basement increases home value and offers additional storage or a comfortable living area. If your basement has moisture, mold, or leaks, our waterproofing and crawl space encapsulation systems provide an effective solution. We also have extensive experience in custom home renovations, delivering high-quality design and construction. Our team is recognized for attention to detail, professionalism, and commitment.",
     image: "/img/basement.jpg",
   },
-  // bathroom: {
-  //   title: "Diseño de Baños Modernos",
-  //   content: "Innovadoras soluciones para remodelación de baños...",
-  //   image: "/img/bathroom.jpg",
-  // },
-  // blacktop: {
-  //   title: "Pavimentación de Calidad",
-  //   content: "Técnicas duraderas para pavimentación residencial y comercial...",
-  //   image: "/img/blacktop.jpg",
-  // },
   carpentry: {
     title: "Carpentry",
     content:
       "We specialize in finish carpentry and framing carpentry, offering a range of services, including: House extensions and additions Custom doors and windows, as well as store-bought options Base and top molding installation Crown molding in any size or width, anywhere in the house Shed and deck repairs, building, and maintenance Framing for walls, ceilings, and partitions Replacing wood damaged by termites Reinforcing the structure of the house or any area Plywood installation and replacement",
     image: "/img/carpentry.jpg",
   },
-  // "ceramic-tile": {
-  //   title: "Instalación de Cerámica",
-  //   content: "Técnicas profesionales para instalación de pisos y paredes...",
-  //   image: "/img/ceramic-tile.jpg",
-  // },
   "commercial-work": {
     title: "Comercial Work",
     content:
@@ -59,16 +46,6 @@ const blogPosts: Record<string, BlogPost> = {
       "We offer a range of carpentry services, including finish and framing carpentry, house extensions, custom and store-bought doors and windows, molding installation (base, top, and crown), shed and deck repairs and construction, as well as framing for walls, ceilings, and partitions. We also replace termite-damaged wood, reinforce structures, and handle plywood installation and replacement. Feel free to contact John for more details.",
     image: "/img/decks.jpg",
   },
-  // demolition: {
-  //   title: "Servicios de Demolición",
-  //   content: "Demolición controlada y segura para remodelaciones...",
-  //   image: "/img/demolition.jpg",
-  // },
-  // "dormer-extension": {
-  //   title: "Ampliación de Buhardillas",
-  //   content: "Maximiza el espacio con extensiones de buhardillas...",
-  //   image: "/img/dormer-extension.jpg",
-  // },
   "drop-ceiling": {
     title: "Drop Ceiling",
     content:
@@ -105,16 +82,6 @@ const blogPosts: Record<string, BlogPost> = {
       "When winter arrives, proper insulation becomes the best solution to keep your home comfortable and energy-efficient. Insulation helps regulate the temperature inside, preventing heat from escaping during the colder months, which not only keeps your home warm but also reduces energy costs. By effectively insulating your walls, attic, and floors, you can ensure a cozy indoor environment while protecting your home from the harsh winter conditions. Additionally, insulation improves your home's energy efficiency year-round, reducing the strain on your heating system and contributing to a more sustainable living space. Let us help you choose and install the right insulation for your home, ensuring maximum comfort and savings.",
     image: "/img/insulation.jpg",
   },
-  // kitchen: {
-  //   title: "Remodelación de Cocinas",
-  //   content: "Diseños funcionales y modernos para tu cocina...",
-  //   image: "/img/kitchen.jpg",
-  // },
-  // maintenance: {
-  //   title: "Mantenimiento Preventivo",
-  //   content: "Programas de mantenimiento para instalaciones...",
-  //   image: "/img/maintenance.jpg",
-  // },
   masonry: {
     title: "Masonry",
     content:
@@ -133,16 +100,6 @@ const blogPosts: Record<string, BlogPost> = {
       "PerfectoRemodel Corp. offers expert interior and exterior painting services for both residential and commercial properties. With years of experience, we provide high-quality painting, including deck, shed, drywall, and flooring treatments, along with color consulting and thorough surface preparation. We ensure a smooth, hassle-free process with clear communication, competitive pricing, and flexible scheduling for commercial projects to minimize disruption. Our licensed and insured team guarantees exceptional results every time, making your home or business look its best. Contact us for a free consultation and estimate.",
     image: "/img/painting.jpg",
   },
-  // portico: {
-  //   title: "Construcción de Pórticos",
-  //   content: "Diseño y construcción de pórticos arquitectónicos...",
-  //   image: "/img/portico.jpg",
-  // },
-  // "retaining-walls": {
-  //   title: "Muros de Contención",
-  //   content: "Construcción de muros para control de erosión...",
-  //   image: "/img/retaining-walls.jpg",
-  // },
   power: {
     title: "Power Wash",
     content:
@@ -186,8 +143,19 @@ const blogPosts: Record<string, BlogPost> = {
     image: "/img/wallpaper.jpg",
   },
 };
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = blogPosts[params.slug];
+
+// Definimos el tipo para las props de la página
+interface PageProps {
+  params: Promise<{
+    slug: string;
+  }>;
+}
+
+// Función para generar metadatos
+export async function generateMetadata({ params }: PageProps) {
+  const resolvedParams = await params;
+  const post = blogPosts[resolvedParams.slug];
+
   if (!post) {
     return {
       title: "Page Not Found",
@@ -199,6 +167,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       },
     };
   }
+
   return {
     title: `${post.title} | Perfecto Remodel`,
     description: post.content,
@@ -210,8 +179,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = blogPosts[params.slug];
+// Función para generar rutas estáticas
+export async function generateStaticParams(): Promise<Array<{ params: { slug: string } }>> {
+  return Object.keys(blogPosts).map((slug) => ({ params: { slug } }));
+}
+
+// Componente de la página
+export default async function BlogPostPage({ params }: PageProps) {
+  const resolvedParams = await params;
+  const post = blogPosts[resolvedParams.slug];
 
   if (!post) {
     notFound();
@@ -222,13 +198,13 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <article className="flex flex-col md:flex-row gap-8">
         <section className="w-full md:w-1/2">
           <figure className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
-            <Image src={post.image} alt={post.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+            <Image src={post.image} alt={post.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" priority />
           </figure>
         </section>
 
         <section className="w-full md:w-1/2">
           <h1 className="text-3xl font-bold text-gray-900">{post.title}</h1>
-          <p className="mt-4 text-gray-700">{post.content}</p>
+          <p className="mt-4 text-gray-700 whitespace-pre-line">{post.content}</p>
         </section>
       </article>
     </main>
