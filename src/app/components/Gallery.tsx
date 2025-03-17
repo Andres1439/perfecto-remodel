@@ -11,70 +11,79 @@ export const Gallery = () => {
             src="/img/trabajo3.jpg"
             width={5000}
             height={5000}
-            alt=""
+            alt="Carpentry Services"
             className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-3 md:row-start-1 dark:bg-gray-500 aspect-square"
           />
           <Image
             src="/img/trabajo1_small.jpg"
             width={500}
             height={500}
-            alt=""
+            alt="Custom Woodwork
+"
             className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
           />
           <Image
             src="/img/trabajo3_small.jpg"
             width={500}
             height={500}
-            alt=""
+            alt="Home Renovation
+"
             className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
           />
           <Image
             src="/img/trabajo4_small.jpg"
             width={500}
             height={500}
-            alt=""
+            alt="Residential Construction
+"
             className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
           />
           <Image
             src="/img/trabajo5_small.jpg"
             width={500}
             height={500}
-            alt=""
+            alt="Commercial Construction
+"
             className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
           />
           <Image
             src="/img/trabajo2.jpg"
             width={500}
             height={500}
-            alt=""
+            alt="Home Improvement
+"
             className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
           />
           <Image
             src="/img/trabajo1.jpg"
             width={500}
             height={500}
-            alt=""
+            alt="Professional Carpenter
+"
             className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
           />
           <Image
             src="/img/trabajo7.jpg"
             width={5000}
             height={5000}
-            alt=""
+            alt="Woodworking Services
+"
             className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
           />
           <Image
             src="/img/trabajo7_small.jpg"
             width={500}
             height={500}
-            alt=""
+            alt="Custom Furniture
+"
             className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
           />
           <Image
             src="/img/trabajo4.jpg"
             width={500}
             height={500}
-            alt=""
+            alt="Interior Design
+"
             className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-1 md:row-start-3 dark:bg-gray-500 aspect-square"
           />
         </div>

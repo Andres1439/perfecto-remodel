@@ -7,8 +7,8 @@ const CardSection = () => {
     { id: 2, title: "Painting", imgSrc: "/icons/painting.png", href: "/blogs/painting" },
     { id: 3, title: "Assembling", imgSrc: "/icons/assembling.png", href: "/blogs/assembling" },
     { id: 4, title: "Flooring", imgSrc: "/icons/flooring.png", href: "/blogs/flooring" },
-    { id: 5, title: "Maintenance", imgSrc: "/icons/maintenance.png", href: "/blogs/maintenance" },
-    { id: 6, title: "Demolition", imgSrc: "/icons/demolition.png", href: "/blogs/demolition" },
+    { id: 5, title: "Fence", imgSrc: "/icons/fence.png", href: "/blogs/fence" },
+    { id: 6, title: "Basement", imgSrc: "/icons/basement.png", href: "/blogs/basement" },
   ];
 
   return (

@@ -25,7 +25,7 @@ const Navbar = () => {
           <section className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <Image width={5000} height={4000} alt="home_logo" src="/home_logo.png" className="h-8 w-auto" />
+              <Image width={5000} height={4000} alt="Construction Contractors" src="/home_logo.png" className="h-8 w-auto" />
             </Link>
             <p className="pl-5 text-2xl text-white">PerfectoRemodel</p>
           </section>
@@ -58,7 +58,7 @@ const Navbar = () => {
             <header className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <Image width={5000} height={4000} alt="logo_home" src="/home_logo.png" className="h-8 w-auto" />
+                <Image width={5000} height={4000} alt="Home Remodeling" src="/home_logo.png" className="h-8 w-auto" />
               </Link>
               <button type="button" onClick={() => setMobileMenuOpen(false)} className="-m-2.5 rounded-md p-2.5 text-white">
                 <span className="sr-only">Close menu</span>

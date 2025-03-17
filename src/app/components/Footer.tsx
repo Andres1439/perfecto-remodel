@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -39,7 +40,7 @@ export const Footer = () => {
         <header className="flex justify-center mb-8">
           <Link href="/" className="flex items-center gap-3">
             <figure className="relative w-12 h-12">
-              <Image src="/home_logo.png" alt="Logo" width={50} height={50} className="object-contain" />
+              <Image src="/home_logo.png" alt="Building Materials" width={50} height={50} className="object-contain" />
             </figure>
             <span className="text-2xl font-semibold">PerfectoRemodel</span>
           </Link>

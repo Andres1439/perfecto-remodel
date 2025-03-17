@@ -115,7 +115,7 @@ export const ImageList = () => {
     },
     {
       title: "Power Wash",
-      imageSrc: "/icons/painting.png",
+      imageSrc: "/icons/power.png",
       link: "/blogs/power",
     },
     // {
@@ -163,7 +163,7 @@ export const ImageList = () => {
   return (
     <section className="@container mx-auto py-8 px-4 max-w-7xl mb-5">
       <header className="text-center">
-        <h2 className="font-bold text-4xl pb-8">OUR PROJECTS</h2>
+        <h1 className="font-bold text-4xl pb-8">OUR PROJECTS</h1>
       </header>
 
       <ul className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">

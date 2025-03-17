@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PerfectoRemodel",
-  description: "PerfectoRemodel",
+  title: "PerfectoRemodel | Expert Carpentry and Construction Services",
+  description:
+    "PerfectoRemodel specializes in high-quality carpentry and construction services. From custom woodwork to home renovations and full builds, our expert team delivers exceptional craftsmanship to transform your space with style, durability, and precision.",
 };
 
 export default function RootLayout({
