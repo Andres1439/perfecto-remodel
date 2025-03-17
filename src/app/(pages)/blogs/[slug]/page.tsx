@@ -8,128 +8,158 @@ type BlogPost = {
 };
 
 const blogPosts: Record<string, BlogPost> = {
+  asphalt: {
+    title: "Asphalt Paving",
+    content: "Técnicas avanzadas para el ensamblaje de estructuras y muebles...",
+    image: "/images/assembling.jpg",
+  },
   assembling: {
-    title: "Ensamblaje Profesional",
+    title: "Assembling",
     content: "Técnicas avanzadas para el ensamblaje de estructuras y muebles...",
     image: "/images/assembling.jpg",
   },
   basement: {
-    title: "Remodelación de Sótanos",
+    title: "Basement",
     content: "Transforma tu sótano en un espacio habitable y funcional...",
     image: "/images/basement.jpg",
   },
-  bathroom: {
-    title: "Diseño de Baños Modernos",
-    content: "Innovadoras soluciones para remodelación de baños...",
-    image: "/images/bathroom.jpg",
-  },
-  blacktop: {
-    title: "Pavimentación de Calidad",
-    content: "Técnicas duraderas para pavimentación residencial y comercial...",
-    image: "/images/blacktop.jpg",
-  },
+  // bathroom: {
+  //   title: "Diseño de Baños Modernos",
+  //   content: "Innovadoras soluciones para remodelación de baños...",
+  //   image: "/images/bathroom.jpg",
+  // },
+  // blacktop: {
+  //   title: "Pavimentación de Calidad",
+  //   content: "Técnicas duraderas para pavimentación residencial y comercial...",
+  //   image: "/images/blacktop.jpg",
+  // },
   carpentry: {
-    title: "Carpintería Especializada",
+    title: "Carpentry",
     content: "Trabajos en madera con diseños personalizados y funcionales...",
     image: "/images/carpentry.jpg",
   },
-  "ceramic-tile": {
-    title: "Instalación de Cerámica",
-    content: "Técnicas profesionales para instalación de pisos y paredes...",
-    image: "/images/ceramic-tile.jpg",
-  },
+  // "ceramic-tile": {
+  //   title: "Instalación de Cerámica",
+  //   content: "Técnicas profesionales para instalación de pisos y paredes...",
+  //   image: "/images/ceramic-tile.jpg",
+  // },
   "commercial-work": {
-    title: "Proyectos Comerciales",
+    title: "Comercial Work",
     content: "Soluciones integrales para espacios comerciales...",
     image: "/images/commercial-work.jpg",
   },
   decks: {
-    title: "Construcción de Deck",
+    title: "Decks",
     content: "Diseño y construcción de decks exteriores duraderos...",
     image: "/images/decks.jpg",
   },
-  demolition: {
-    title: "Servicios de Demolición",
-    content: "Demolición controlada y segura para remodelaciones...",
-    image: "/images/demolition.jpg",
-  },
-  "dormer-extension": {
-    title: "Ampliación de Buhardillas",
-    content: "Maximiza el espacio con extensiones de buhardillas...",
-    image: "/images/dormer-extension.jpg",
-  },
+  // demolition: {
+  //   title: "Servicios de Demolición",
+  //   content: "Demolición controlada y segura para remodelaciones...",
+  //   image: "/images/demolition.jpg",
+  // },
+  // "dormer-extension": {
+  //   title: "Ampliación de Buhardillas",
+  //   content: "Maximiza el espacio con extensiones de buhardillas...",
+  //   image: "/images/dormer-extension.jpg",
+  // },
   "drop-ceiling": {
-    title: "Techos Desmontables",
+    title: "Drop Ceiling",
     content: "Instalación profesional de techos suspendidos...",
     image: "/images/drop-ceiling.jpg",
   },
   drywall: {
-    title: "Trabajos en Drywall",
+    title: "Drywall",
     content: "Instalación y reparación de paredes de yeso...",
     image: "/images/drywall.jpg",
   },
   fence: {
-    title: "Instalación de Cercas",
+    title: "Fence",
     content: "Cercas de seguridad y decorativas para tu propiedad...",
     image: "/images/fence.jpg",
   },
   flooring: {
-    title: "Pisos de Calidad",
+    title: "Flooring",
+    content: "Instalación de diversos tipos de pisos y acabados...",
+    image: "/images/flooring.jpg",
+  },
+  gutter: {
+    title: "Gutter",
     content: "Instalación de diversos tipos de pisos y acabados...",
     image: "/images/flooring.jpg",
   },
   insulation: {
-    title: "Aislamiento Térmico",
+    title: "Insulation",
     content: "Soluciones de aislamiento para eficiencia energética...",
     image: "/images/insulation.jpg",
   },
-  kitchen: {
-    title: "Remodelación de Cocinas",
-    content: "Diseños funcionales y modernos para tu cocina...",
-    image: "/images/kitchen.jpg",
-  },
-  maintenance: {
-    title: "Mantenimiento Preventivo",
-    content: "Programas de mantenimiento para instalaciones...",
-    image: "/images/maintenance.jpg",
-  },
+  // kitchen: {
+  //   title: "Remodelación de Cocinas",
+  //   content: "Diseños funcionales y modernos para tu cocina...",
+  //   image: "/images/kitchen.jpg",
+  // },
+  // maintenance: {
+  //   title: "Mantenimiento Preventivo",
+  //   content: "Programas de mantenimiento para instalaciones...",
+  //   image: "/images/maintenance.jpg",
+  // },
   masonry: {
-    title: "Trabajos de Albañilería",
+    title: "Masonry",
+    content: "Construcción y reparación de estructuras de mampostería...",
+    image: "/images/masonry.jpg",
+  },
+  outdoor: {
+    title: "Outdoor",
     content: "Construcción y reparación de estructuras de mampostería...",
     image: "/images/masonry.jpg",
   },
   painting: {
-    title: "Pintura Profesional",
+    title: "Painting",
     content: "Servicios de pintura interior y exterior...",
     image: "/images/painting.jpg",
   },
-  portico: {
-    title: "Construcción de Pórticos",
-    content: "Diseño y construcción de pórticos arquitectónicos...",
-    image: "/images/portico.jpg",
-  },
-  "retaining-walls": {
-    title: "Muros de Contención",
-    content: "Construcción de muros para control de erosión...",
-    image: "/images/retaining-walls.jpg",
+  // portico: {
+  //   title: "Construcción de Pórticos",
+  //   content: "Diseño y construcción de pórticos arquitectónicos...",
+  //   image: "/images/portico.jpg",
+  // },
+  // "retaining-walls": {
+  //   title: "Muros de Contención",
+  //   content: "Construcción de muros para control de erosión...",
+  //   image: "/images/retaining-walls.jpg",
+  // },
+  power: {
+    title: "Power Wash",
+    content: "Instalación y mantenimiento de cubiertas...",
+    image: "/images/roof.jpg",
   },
   roof: {
-    title: "Reparación de Techos",
+    title: "Roof",
     content: "Instalación y mantenimiento de cubiertas...",
     image: "/images/roof.jpg",
   },
   shed: {
-    title: "Casas de Herramientas",
+    title: "Shed",
     content: "Construcción de cobertizos y almacenes...",
     image: "/images/shed.jpg",
   },
   siding: {
-    title: "Revestimiento Exterior",
+    title: "Siding",
+    content: "Instalación de sistemas de revestimiento...",
+    image: "/images/siding.jpg",
+  },
+  site: {
+    title: "Site Preparation",
+    content: "Instalación de sistemas de revestimiento...",
+    image: "/images/siding.jpg",
+  },
+  tiling: {
+    title: "Tiling / Marble",
     content: "Instalación de sistemas de revestimiento...",
     image: "/images/siding.jpg",
   },
   wallpaper: {
-    title: "Instalación de Papel Tapiz",
+    title: "Wallpaper de Papel Tapiz",
     content: "Aplicación profesional de papel mural...",
     image: "/images/wallpaper.jpg",
   },

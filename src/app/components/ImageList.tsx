@@ -4,6 +4,11 @@ import Link from "next/link";
 export const ImageList = () => {
   const items = [
     {
+      title: "Asphalt paving",
+      imageSrc: "/icons/asphalt.png",
+      link: "/blogs/asphalt",
+    },
+    {
       title: "Assembling",
       imageSrc: "/icons/assembling.png",
       link: "/blogs/assembling",
@@ -13,26 +18,26 @@ export const ImageList = () => {
       imageSrc: "/icons/basement.png",
       link: "/blogs/basement",
     },
-    {
-      title: "Bathroom",
-      imageSrc: "/icons/bathroom.png",
-      link: "/blogs/bathroom",
-    },
-    {
-      title: "Blacktop",
-      imageSrc: "/icons/blacktop.png",
-      link: "/blogs/blacktop",
-    },
+    // {
+    //   title: "Bathroom",
+    //   imageSrc: "/icons/bathroom.png",
+    //   link: "/blogs/bathroom",
+    // },
+    // {
+    //   title: "Blacktop",
+    //   imageSrc: "/icons/blacktop.png",
+    //   link: "/blogs/blacktop",
+    // },
     {
       title: "Carpentry",
       imageSrc: "/icons/carpentry.png",
       link: "/blogs/carpentry",
     },
-    {
-      title: "Ceramic-tile",
-      imageSrc: "/icons/ceramic.png",
-      link: "/blogs/ceramic-tile",
-    },
+    // {
+    //   title: "Ceramic-tile",
+    //   imageSrc: "/icons/ceramic.png",
+    //   link: "/blogs/ceramic-tile",
+    // },
     {
       title: "Commercial work",
       imageSrc: "/icons/commercial.png",
@@ -43,23 +48,23 @@ export const ImageList = () => {
       imageSrc: "/icons/decks.png",
       link: "/blogs/decks",
     },
+    // {
+    //   title: "Demolition",
+    //   imageSrc: "/icons/demolition.png",
+    //   link: "/blogs/demolition",
+    // },
+    // {
+    //   title: "Dormer-extension",
+    //   imageSrc: "/icons/dormer.png",
+    //   link: "/blogs/dormer-extension",
+    // },
     {
-      title: "Demolition",
-      imageSrc: "/icons/demolition.png",
-      link: "/blogs/demolition",
-    },
-    {
-      title: "Dormer-extension",
-      imageSrc: "/icons/dormer.png",
-      link: "/blogs/dormer-extension",
-    },
-    {
-      title: "Drop-ceiling",
+      title: "Drop ceiling",
       imageSrc: "/icons/drop.png",
       link: "/blogs/drop-ceiling",
     },
     {
-      title: "Drywall",
+      title: "Drywall / sheetrock",
       imageSrc: "/icons/drywall.png",
       link: "/blogs/drywall",
     },
@@ -74,24 +79,34 @@ export const ImageList = () => {
       link: "/blogs/flooring",
     },
     {
+      title: "Gutter",
+      imageSrc: "/icons/gutter.png",
+      link: "/blogs/gutter",
+    },
+    {
       title: "Insulation",
       imageSrc: "/icons/insulation.png",
       link: "/blogs/insulation",
     },
-    {
-      title: "Kitchen",
-      imageSrc: "/icons/kitchen.png",
-      link: "/blogs/kitchen",
-    },
-    {
-      title: "Maintenance",
-      imageSrc: "/icons/maintenance.png",
-      link: "/blogs/maintenance",
-    },
+    // {
+    //   title: "Kitchen",
+    //   imageSrc: "/icons/kitchen.png",
+    //   link: "/blogs/kitchen",
+    // },
+    // {
+    //   title: "Maintenance",
+    //   imageSrc: "/icons/maintenance.png",
+    //   link: "/blogs/maintenance",
+    // },
     {
       title: "Masonry",
       imageSrc: "/icons/masonry.png",
       link: "/blogs/masonry",
+    },
+    {
+      title: "Outdoor",
+      imageSrc: "/icons/outdoor.png",
+      link: "/blogs/outdoor",
     },
     {
       title: "Painting",
@@ -99,15 +114,20 @@ export const ImageList = () => {
       link: "/blogs/painting",
     },
     {
-      title: "Portico",
-      imageSrc: "/icons/portico.png",
-      link: "/blogs/portico",
+      title: "Power Wash",
+      imageSrc: "/icons/painting.png",
+      link: "/blogs/power",
     },
-    {
-      title: "Retaining walls",
-      imageSrc: "/icons/wall.png",
-      link: "/blogs/retaining-walls",
-    },
+    // {
+    //   title: "Portico",
+    //   imageSrc: "/icons/portico.png",
+    //   link: "/blogs/portico",
+    // },
+    // {
+    //   title: "Retaining walls",
+    //   imageSrc: "/icons/wall.png",
+    //   link: "/blogs/retaining-walls",
+    // },
     {
       title: "Roof",
       imageSrc: "/icons/roof.png",
@@ -122,6 +142,16 @@ export const ImageList = () => {
       title: "Siding",
       imageSrc: "/icons/siding.png",
       link: "/blogs/siding",
+    },
+    {
+      title: "Site Preparation",
+      imageSrc: "/icons/site.png",
+      link: "/blogs/site",
+    },
+    {
+      title: "Tiling / Marble",
+      imageSrc: "/icons/tile.png",
+      link: "/blogs/tiling",
     },
     {
       title: "Wallpaper",
