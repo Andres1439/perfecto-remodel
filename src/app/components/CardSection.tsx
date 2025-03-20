@@ -3,12 +3,12 @@ import Link from "next/link";
 
 const CardSection = () => {
   const cards = [
-    { id: 1, title: "Carpentry", imgSrc: "/icons/carpentry.png", href: "/blogs/carpentry" },
-    { id: 2, title: "Painting", imgSrc: "/icons/painting.png", href: "/blogs/painting" },
-    { id: 3, title: "Assembling", imgSrc: "/icons/assembling.png", href: "/blogs/assembling" },
-    { id: 4, title: "Flooring", imgSrc: "/icons/flooring.png", href: "/blogs/flooring" },
-    { id: 5, title: "Fence", imgSrc: "/icons/fence.png", href: "/blogs/fence" },
-    { id: 6, title: "Basement", imgSrc: "/icons/basement.png", href: "/blogs/basement" },
+    { id: 1, title: "Carpentry", imgSrc: "/icons/carpentry.png", href: "/services/carpentry" },
+    { id: 2, title: "Painting", imgSrc: "/icons/painting.png", href: "/services/painting" },
+    { id: 3, title: "Assembling", imgSrc: "/icons/assembling.png", href: "/services/assembling" },
+    { id: 4, title: "Flooring", imgSrc: "/icons/flooring.png", href: "/services/flooring" },
+    { id: 5, title: "Fence", imgSrc: "/icons/fence.png", href: "/services/fence" },
+    { id: 6, title: "Basement", imgSrc: "/icons/basement.png", href: "/services/basement" },
   ];
 
   return (

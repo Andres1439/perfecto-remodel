@@ -1,11 +1,10 @@
 "use client";
-import { ImageList } from "@/app/components/ImageList";
-import React from "react";
+import BlogContent from "@/app/components/BlogContent";
 
 export default function page() {
   return (
     <section className="pt-24 lg:pt-28">
-      <ImageList />
+      <BlogContent />
     </section>
   );
 }
