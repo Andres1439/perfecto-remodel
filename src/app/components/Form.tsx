@@ -1,13 +1,18 @@
 import React from "react";
 
 export const Form = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const form = e.currentTarget as HTMLFormElement;
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+
+    // Abre el cliente de correo con solo el mensaje
+    window.location.href = `mailto:prybar@perfectoremodel.com?subject=Consulta de PerfectoRemodel&body=${encodeURIComponent(message)}`;
+  };
+
   return (
     <section className="px-1 py-10 text-gray-200">
-      <form
-        action="https://formspree.io/f/meoaoakb"
-        method="POST"
-        className="container w-full max-w-xl p-8 mx-auto space-y-6 rounded-md shadow bg-gray-600"
-      >
+      <form onSubmit={handleSubmit} className="container w-full max-w-xl p-8 mx-auto space-y-6 rounded-md shadow bg-gray-600">
         <header>
           <h2 className="w-full text-3xl font-bold leading-tight text-center">Contact us</h2>
         </header>

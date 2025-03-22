@@ -130,13 +130,14 @@ export const ImageList = () => {
             <Link href={item.link} className="flex flex-col items-center justify-center h-full w-full space-y-2">
               <figure className="relative w-16 h-16 @sm:w-14 @sm:h-14 flex items-center justify-center">
                 <Image
-                  width={5000}
-                  height={5000}
+                  width={64} // Valor real del tamaño de la imagen
+                  height={64}
                   src={item.imageSrc}
                   alt={item.title}
                   className="object-contain p-1"
-                  sizes="(max-width: 768px) 50vw, 20vw"
-                  priority={index < 8}
+                  quality={75}
+                  loading={index < 8 ? "eager" : "lazy"}
+                  unoptimized={true} // 🔥 Obligatorio con output: export
                 />
               </figure>
 

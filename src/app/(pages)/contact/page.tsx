@@ -21,6 +21,15 @@ const EmailIcon = () => (
 );
 
 export default function Contact() {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const form = e.currentTarget as HTMLFormElement;
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+
+    // Abre el cliente de correo con solo el mensaje
+    window.location.href = `mailto:prybar@perfectoremodel.com?subject=Consulta de PerfectoRemodel&body=${encodeURIComponent(message)}`;
+  };
+
   return (
     <section className="dark:text-gray-900 pt-24 lg:pt-28 my-20">
       <h2 className="font-bold text-4xl pb-12 text-center">CONTACT US</h2>
@@ -58,7 +67,7 @@ export default function Contact() {
         </aside>
 
         {/* Formulario */}
-        <form action="https://formspree.io/f/meoaoakb" method="POST" className="flex flex-col py-6 space-y-6 md:py-6 md:px-6 bg-gray-300">
+        <form onSubmit={handleSubmit} className="flex flex-col py-6 space-y-6 md:py-6 md:px-6 bg-gray-300">
           <fieldset className="space-y-6">
             <legend className="sr-only">Contact Information</legend>
 
