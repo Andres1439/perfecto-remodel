@@ -1,18 +1,47 @@
 import React from "react";
 
 export const Form = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const form = e.currentTarget as HTMLFormElement;
-    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+  // Función para manejar el envío del formulario
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
-    // Abre el cliente de correo con solo el mensaje
-    window.location.href = `mailto:prybar@perfectoremodel.com?subject=Consulta de PerfectoRemodel&body=${encodeURIComponent(message)}`;
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        alert("Thank you for your message!"); // Mensaje de éxito
+        form.reset(); // Limpia el formulario
+      } else {
+        const data = await response.json();
+        if (data.errors) {
+          alert(data.errors.map((error: { message: string }) => error.message).join(", "));
+        } else {
+          alert("Oops! There was a problem submitting your form.");
+        }
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error); // Muestra el error en la consola
+      alert("Oops! There was a problem submitting your form.");
+    }
   };
 
   return (
     <section className="px-1 py-10 text-gray-200">
-      <form onSubmit={handleSubmit} className="container w-full max-w-xl p-8 mx-auto space-y-6 rounded-md shadow bg-gray-600">
+      <form
+        onSubmit={handleSubmit}
+        action="https://formspree.io/f/xkgjrorn"
+        method="POST"
+        className="container w-full max-w-xl p-8 mx-auto space-y-6 rounded-md shadow bg-gray-600"
+      >
         <header>
           <h2 className="w-full text-3xl font-bold leading-tight text-center">Contact us</h2>
         </header>

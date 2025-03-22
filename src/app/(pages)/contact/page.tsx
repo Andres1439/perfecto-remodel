@@ -21,13 +21,36 @@ const EmailIcon = () => (
 );
 
 export default function Contact() {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const form = e.currentTarget as HTMLFormElement;
-    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault(); // Evita el envío normal del formulario
 
-    // Abre el cliente de correo con solo el mensaje
-    window.location.href = `mailto:prybar@perfectoremodel.com?subject=Consulta de PerfectoRemodel&body=${encodeURIComponent(message)}`;
+    const form = event.currentTarget; // Usamos currentTarget en lugar de target
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        alert("Thank you for your message!"); // Mensaje de éxito
+        form.reset(); // Limpia el formulario
+      } else {
+        const data = await response.json();
+        if (data.errors) {
+          alert(data.errors.map((error: { message: string }) => error.message).join(", "));
+        } else {
+          alert("Oops! There was a problem submitting your form.");
+        }
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error); // Muestra el error en la consola
+      alert("Oops! There was a problem submitting your form.");
+    }
   };
 
   return (
@@ -67,10 +90,16 @@ export default function Contact() {
         </aside>
 
         {/* Formulario */}
-        <form onSubmit={handleSubmit} className="flex flex-col py-6 space-y-6 md:py-6 md:px-6 bg-gray-300">
+        <form
+          onSubmit={handleSubmit}
+          action="https://formspree.io/f/{your-form-id}"
+          method="POST"
+          className="flex flex-col py-6 space-y-6 md:py-6 md:px-6 bg-gray-300"
+        >
           <fieldset className="space-y-6">
             <legend className="sr-only">Contact Information</legend>
 
+            {/* Nombre completo */}
             <label className="block space-y-2">
               <span className="block text-sm font-medium">Full name</span>
               <input
@@ -81,6 +110,7 @@ export default function Contact() {
               />
             </label>
 
+            {/* Correo electrónico */}
             <label className="block space-y-2">
               <span className="block text-sm font-medium">Email address</span>
               <input
@@ -91,6 +121,7 @@ export default function Contact() {
               />
             </label>
 
+            {/* Mensaje */}
             <label className="block space-y-2">
               <span className="block text-sm font-medium">Message</span>
               <textarea
@@ -102,6 +133,7 @@ export default function Contact() {
               ></textarea>
             </label>
 
+            {/* Botón de envío */}
             <button
               type="submit"
               className="w-full md:w-auto px-6 py-3 font-medium rounded-md bg-blue-600 text-white hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
