@@ -85,7 +85,6 @@ export const Form = () => {
               required
               className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:dark:ring-violet-600 bg-gray-100 text-black"
               placeholder=""
-              pattern="[0-9+() -]{8,20}"
               title="Please enter a valid phone number (numbers and + - () symbols)"
             />
           </label>

@@ -92,7 +92,7 @@ export default function Contact() {
         {/* Formulario */}
         <form
           onSubmit={handleSubmit}
-          action="https://formspree.io/f/{your-form-id}"
+          action="https://formspree.io/f/xkgjrorn"
           method="POST"
           className="flex flex-col py-6 space-y-6 md:py-6 md:px-6 bg-gray-300"
         >
